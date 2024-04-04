@@ -1,0 +1,23 @@
+.benefits {
+    padding: clamp(3.75rem, 2.679rem + 5.36vw, 7.5rem) 0;
+}
+
+.benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    @include tablet () {
+        grid-template-columns: repeat(2,1fr); //290
+
+        gap: clamp(1.875rem, 0.982rem + 4.46vw, 3.75rem) 20px;
+    } 
+
+    @include tablet-mini () {
+        grid-template-columns: repeat(auto-fit,minmax(290px, 1fr));
+    }
+}
+
+.benefits__title {
+    max-width: 242px;
+}
+

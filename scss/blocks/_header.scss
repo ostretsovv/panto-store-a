@@ -1,0 +1,94 @@
+.header {
+    position: relative;
+    
+    padding-top: 40px;
+    background-color: var(--footer-bg);
+    background-image: url("./../img/header/header-bg.jpg");
+    aspect-ratio: 1440 / 1084;
+    background-size: cover;
+
+    color: var(--header-text-color);
+
+    @include retina-bg(url("./../img/header/header-bg@2x.jpg"));
+
+    a {
+        color: var(--header-text-color);
+    }
+
+}
+
+.header__nav {
+    margin-bottom: clamp(20px, 0.071rem + 5.89vw, 86px);
+}
+
+.header__content {
+    text-align: center;
+
+    p {
+        max-width: 606px;
+        margin: 0 auto;
+        opacity: 0.8;
+
+        text-wrap: balance;
+        font-size: clamp(16px, 0.857rem + 0.71vw, 24px);
+    }
+}
+
+.inverse__text {
+    @include mobile-reverse-text () {
+        color: rgb(138, 138, 138);
+    } 
+    
+} 
+
+.header__title {
+    font-weight: 700;
+    font-size: clamp(28px, 0.821rem + 4.64vw, 80px);
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+    text-transform: capitalize;
+
+    margin-bottom: 14px;
+}
+
+.header__search {
+    display: inline-block;
+    margin: 45px auto 0;
+    
+    @include tablet-mini () {
+        display: none;
+    } 
+}
+
+// DOTS
+
+.header__dot {
+    position: absolute;
+    @include tablet-mini () {
+        display: none;
+    } 
+}
+
+.header__dot--sofa {
+    position: absolute;
+    left: 20.9%;
+    top: 63.5%;
+}
+
+.header__dot--vase {
+    position: absolute;
+    top: 69%;
+    left: 7.8%;
+}
+
+.header__dot--item {
+    position: absolute;
+    top: 72%;
+    right: 42.6%;
+}
+
+.header__dot--wall {
+    position: absolute;
+    top: 75.7%;
+    right: 3.2%;
+}
